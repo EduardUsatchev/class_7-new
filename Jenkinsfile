@@ -1,3 +1,4 @@
+properties([pipelineTriggers([pollSCM('* * * * *')])])
 node("edi"){
     stage("clone"){
         git branch: 'main', url: 'https://github.com/EduardUsatchev/class_7-new.git'
